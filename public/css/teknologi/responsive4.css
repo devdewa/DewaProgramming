@@ -1,0 +1,365 @@
+/*------------------------------------------------------------------
+[Adityawarman Dewa Putra] [SMKN 1 JAKARTA] 
+
+Copyright 2020 By: Dewa Programming
+
+Project		:	Blog
+Dibuat	    :	05/05/2020
+Instagram   :   @dewaprogramming -- @741_dewa -- @dewasmkn1jakarta
+-------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------
+[Judul]
+
+0. Biasa
+1. Navigasi
+2. Landing Page
+3. Konten
+4. Sidebar 
+5. Footer
+6. Penutup
+7. Hamburger Navigasi
+8. Hamburger Navigasi -Animasinya-
+9. Waktu
+10. Pagination 
+11. Keyframes
+12. Breadcrumb
+13. Sebelum Footer
+14. Komentar
+15. Tombol Scroll Atas
+16. Searching
+17. Header 
+18. Mode Malam
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+[NOTE]
+COPY PASTE PUNYA ORANG LAIN TANPA IZIN ITU DOSA
+IZIN TERLEBIH DAHULU. TERIMAKASIH :)
+-------------------------------------------------------------------*/
+
+
+
+/* Tablet*/
+@media only screen and (min-width: 651px) and (max-width: 1200px) {
+
+    /*-------------------------------------------------------------------
+    [0. Biasa]
+    *------------------------------------------------------------------*/
+    .container {
+        padding: 0px 2% 70px 2%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background: #222627;
+    }
+    
+    /*-------------------------------------------------------------------
+    [1. Navigasi]
+    *------------------------------------------------------------------*/
+    .Navigasi {
+        display: flex;
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(128, 74, 216) 0%, #8c00ff 77%);
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+        position: relative;
+        color: rgb(74, 70, 151);
+        font-family: 'Comic Neue', cursive;
+        -webkit-box-shadow: 0px 0px 0px 0px rgba(235,235,235,1);
+        -moz-box-shadow: 0px 0px 0px 0px rgba(235,235,235,1);
+        box-shadow: 0px 0px 0px 0px rgba(235,235,235,1);   
+    }
+
+    nav ul {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgb(240, 240, 240);
+        align-items: flex-start;
+        justify-content: space-evenly;
+        transition: 0.5s ease;
+        opacity: 0;
+        visibility: hidden;
+        padding: 15px;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        visibility: unset;
+    }
+
+    nav.navfixed {
+
+    }
+
+    nav ul li {
+        margin-left: 0px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: rgb(74, 70, 151);
+        margin-right: 0;
+    }
+
+    nav ul li a:hover {
+        text-decoration: none;
+        color: black;
+        margin-right: 0px;
+        transition: 0.1s ease;
+    }
+
+    nav ul li span {
+        font-family: 'Quicksand', sans-serif;
+        text-decoration: none;
+        color: rgb(74, 70, 151);
+        margin-right: 40px;
+    }
+
+    .logonav {
+        display: flex;
+        margin: auto;
+    }
+
+    .logonav #LogoNavigasi {
+        width: 130px;
+    }
+
+    nav button {
+        background-color: transparent;
+        border: transparent;
+        cursor: pointer;
+        color: white;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 15px;
+        text-align: start;
+        outline: none;
+    }
+    
+    /*DropDown*/
+    nav ul li ul {
+        position: absolute;
+        width: 260px;
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(128, 74, 216) 0%, #8c00ff 77%);
+        display: flex;
+        justify-content: space-between;
+        visibility: hidden;
+        opacity: 0;
+        height: 40vh;
+        margin: 20vh 0px 0px 30vh;
+    }
+    
+    nav ul li ul li {
+        padding: 10px;
+    }
+    
+    nav ul li ul li:last-child {
+        border-bottom: none;
+    }
+    
+    nav ul li ul li a {
+        color: #FFFFFF; 
+        font-size: 13px;
+    }
+    
+    nav ul li ul.Klik {
+        visibility: visible;
+        opacity: 1;
+        transition: 0.2s ease-in-out;
+        height: 45vh;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /*-------------------------------------------------------------------
+    [2. Landing Page]
+    *------------------------------------------------------------------*/
+    
+    /*-------------------------------------------------------------------
+    [3. Konten]
+    *------------------------------------------------------------------*/
+    .KontenTerakhirDanSidebar {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .KontenUtama {
+        display: none;
+    }
+
+    .Kiri {
+        width: 100%;
+    }
+
+    .Kanan {
+        display: none;
+        width: 0%;
+    }
+
+    .KontenTerakhirDanSidebar {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .KontenTerakhir {
+        width: 100%;
+        background: #222627;
+        padding: 10px 10px;
+    }
+
+    .TeksKontenKiri h1 {
+        font-size: 22px;
+    }
+
+    /*-------------------------------------------------------------------
+    [4. Sidebar]
+    *------------------------------------------------------------------*/
+    .Sidebar {
+        width: 100%;
+        padding: 0px 20px;
+        background-color: #222627;
+    }
+
+    /*-------------------------------------------------------------------
+    [5. Footer]
+    *------------------------------------------------------------------*/
+    .Footer {
+        width: 100%;
+        padding: 10px 3%;
+        background-color: #222627;
+        display: flex;
+        flex-direction: column;
+        margin: 20px auto;
+    }
+
+    .FooterKiri {
+        width: 100%;
+        display: flex;
+        align-self: center;
+        justify-content: space-evenly;
+    }
+
+    .FooterKanan {
+        width: 100%;
+        display: flex;
+        margin: 20px 0px 0px 0px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .FooterKanan a {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #AAA;
+        padding: 10px
+    }
+
+    .Footer a,.Footer p {
+        text-decoration: none;
+        color: #FFFFFF;
+        margin: 0px 10px;
+        font-size: 15px;
+    }
+
+    /*-------------------------------------------------------------------
+    [6. Penutup]
+    *------------------------------------------------------------------*/
+    .Penutup {
+        width: 100%;
+        padding: 10px 3%;
+        background-color: #111111;
+        display: flex;
+        margin: 20px auto 0px auto;
+        justify-content: center;
+    }
+
+    .Penutup p {
+        text-decoration: none;
+        color: #FFFFFF;
+        margin: 0px 10px;
+        font-size: 14px;
+        font-family: 'Poppins'; 
+    }
+
+    /*-------------------------------------------------------------------
+    [7. Hamburger Navigasi]
+    *------------------------------------------------------------------*/
+    .menu-toggle {
+        display: flex;
+    }
+
+    /*-------------------------------------------------------------------
+    [8. Hamburger Navigasi -Animasinya-]
+    *------------------------------------------------------------------*/
+
+    /*-------------------------------------------------------------------
+    [9. Waktu]
+    *------------------------------------------------------------------*/
+    
+    /*-------------------------------------------------------------------
+    [10. Pagination]
+    *------------------------------------------------------------------*/
+
+    /*-------------------------------------------------------------------
+    [11. Keyframes]
+    *------------------------------------------------------------------*/
+
+    /*-------------------------------------------------------------------
+    [12. Breadcrumb]
+    *------------------------------------------------------------------*/
+
+    /*-------------------------------------------------------------------
+    [13. SebelumFooter]
+    *------------------------------------------------------------------*/
+
+    /*-------------------------------------------------------------------
+    [14. Komentar]
+    *------------------------------------------------------------------*/
+
+    /*-------------------------------------------------------------------
+    [15.Tombol Scroll Atas]
+    *------------------------------------------------------------------*/
+    .TombolScrollAtas {
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    /*-------------------------------------------------------------------
+    [16. Searching]
+    *------------------------------------------------------------------*/
+    .Searching {
+        width: 100%;
+    }
+
+    /*-------------------------------------------------------------------
+    [17. Header]
+    *------------------------------------------------------------------*/
+    .Header {
+        padding: 0px 10px;
+    }
+
+    .SocialMediaHeader {
+        display: none;
+    }
+
+    /*-------------------------------------------------------------------
+    [18. Mode Malam]
+    *------------------------------------------------------------------*/
+    .ModeMalam {
+        position: unset;
+        margin: 0px;
+        outline: none;
+    }
+
+    .label {
+        transform: scale(1);
+    }
+
+}

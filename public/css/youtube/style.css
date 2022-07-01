@@ -1,0 +1,227 @@
+/*------------------------------------------------------------------
+[Adityawarman Dewa Putra] [SMKN 1 JAKARTA] 
+
+Copyright 2020 By: Dewa Programming
+
+Project		:	Blog
+Dibuat	    :	05/05/2020
+Instagram   :   @dewaprogramming -- @741_dewa -- @dewasmkn1jakarta
+-------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------
+[Judul]
+
+0. Default
+1. Navigasi
+2. Profile
+3. Konten
+4. Animasi Loading
+5. Player
+6. 12 Video
+7. All Video
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+[NOTE]
+COPY PASTE PUNYA ORANG LAIN TANPA IZIN ITU DOSA
+IZIN TERLEBIH DAHULU. TERIMAKASIH :)
+-------------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------------
+[0. Default]
+*------------------------------------------------------------------*/
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: #FF0030;
+}
+::-webkit-scrollbar-track {
+    background: #455a64;
+}
+
+html, body {
+    background-color: #191919;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box !important;
+}
+
+.btn {
+    background-color: #FF0030 !important;
+}
+
+
+
+/*-------------------------------------------------------------------
+[1. Navigasi]
+*------------------------------------------------------------------*/
+nav {
+    background: linear-gradient(90deg, #75001d 0%, #FF0030 0%, #e00038 77%) !important;
+    padding: 0px 20px;
+}
+
+nav img {
+    width: 60px !important;
+}
+
+nav ul, nav li {
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+}
+
+nav a {
+    color: #FFFFFF !important;
+}
+
+.dropdown-content li a, .dropdown-item {
+    color: #111111 !important;
+}
+
+.dropdown-content li a:hover {
+    background-color: transparent;
+}
+
+.sidenav-trigger {
+    display: unset !important;
+}
+
+nav .left a {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .left a:hover {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+nav .left span {
+    font-size: 25px;
+}
+
+
+
+/*-------------------------------------------------------------------
+[2. Profile]
+*------------------------------------------------------------------*/
+#Profile {
+    background-color: #191919;
+}
+
+
+
+/*-------------------------------------------------------------------
+[3. Konten]
+*------------------------------------------------------------------*/
+#Konten {
+    margin: 20px auto !important;
+}
+
+#videos {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    background-color: #191919;
+}
+
+.allvideo-container {
+    overflow: unset !important;
+}
+
+.allvideo, .allvideo a {
+    display: flex !important;
+    width: 100%;
+}
+
+.allvideo {
+    margin: 10px 0px;
+    height: 100%;
+}
+
+.v-title {
+    margin: 0px 10px;
+    color: #FFFFFF;
+}
+
+
+
+/*-------------------------------------------------------------------
+[4. Animasi Loading]
+*------------------------------------------------------------------*/
+#Loader {
+    width:100%;
+    height:100%;
+    position:absolute;
+    background:#000;
+    z-index:999 !important;
+}
+
+.container-load {
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    animation:colorize 2s ease infinite; 
+    overflow:hidden;
+}
+  
+@keyframes colorize {
+    20% { filter:hue-rotate(72deg); }
+    40% { filter:hue-rotate(144deg); }
+    60% { filter:hue-rotate(216deg); }
+    80% { filter:hue-rotate(288deg); }
+    100% { filter:hue-rotate(360deg); }
+}
+  
+.loader {
+    width:calc(100% - 12px);
+    height:calc(100% - 12px);
+    position:absolute;
+    border:5px solid #000;
+    border-top:5px solid #09f;
+    border-radius:50%;
+    animation-fill-mode: forwards;
+    animation:rotate 2s 0.5s linear infinite;
+}
+
+@keyframes rotate {
+    100% { transform: rotate(360deg); }
+}
+
+
+
+/*-------------------------------------------------------------------
+[5. Player]
+*------------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------------
+[6. 12 Video]
+*------------------------------------------------------------------*/
+.BungkusDuaBelasVideo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#videoss {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.duabelasvideo {
+
+}

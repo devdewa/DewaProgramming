@@ -1,0 +1,1008 @@
+/*------------------------------------------------------------------
+[Adityawarman Dewa Putra] [SMKN 1 JAKARTA] 
+
+Copyright 2020 By: Dewa Programming
+
+Project		:	Blog
+Dibuat	    :	05/05/2020
+Instagram   :   @dewaprogramming -- @741_dewa -- @dewasmkn1jakarta
+-------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------
+[Judul]
+
+0. Biasa
+1. Navigasi
+2. Konten
+3. Sidebar 
+4. Footer
+5. Penutup
+6. Hamburger Navigasi
+7. Hamburger Navigasi -Animasinya-
+8. Keyframes
+9. Breadcrumb
+10. Sebelum Footer 
+11. Komentar
+12. Tombol Scroll Atas
+13. Searching
+14. Header 
+15. Mode Malam
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+[NOTE]
+COPY PASTE PUNYA ORANG LAIN TANPA IZIN ITU DOSA
+IZIN TERLEBIH DAHULU. TERIMAKASIH :)
+-------------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------------
+[0. Biasa]
+*------------------------------------------------------------------*/
+@font-face {
+    font-family: 'Quicksand'; 
+    src: url('../../../Fonts/Quicksand.woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../../../Fonts/Poppins.woff2');
+}
+
+@font-face {
+    font-family: 'Lato'; 
+    src: url('../../../Fonts/Lato.woff2');
+}
+
+@font-face {
+    font-family: 'Avenir'; 
+    src: url('../../../Fonts/Avenir.woff2');
+}
+
+body {
+    background: #222627;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(74, 70, 151);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(130, 124, 255);
+}
+::-webkit-scrollbar-track {
+    background: #455a64;
+}
+
+div img[alt="www.000webhost.com"], div img[alt='www.000webhost.com']
+{ 
+    display:none;visibility:hidden;
+}
+
+.container {
+    padding: 0px 140px 70px 140px;
+    padding-left: 11%;
+    padding-right: 11%;
+    width: 100%;
+    display: flex;
+    background: #222627;
+}
+
+.Akhir {
+    border-top: 5px solid rgb(74, 70, 151);
+    background-color: #191c1d;
+}
+
+.prettyprint {
+    display: unset;
+    overflow: auto;
+}
+
+.st-label {
+    font-family: 'Avenir';
+}
+
+
+
+/*-------------------------------------------------------------------
+[1. Navigasi]
+*------------------------------------------------------------------*/
+.Navigasi {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(128, 74, 216) 0%, #8c00ff 77%);
+    padding-top: 0.1%;
+    padding-bottom: 0.1%;
+    padding-left: 11%;
+    padding-right: 11%;
+    width: 100%;
+    color: #FFFFFF;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+}   
+
+nav ul {
+    display: flex;
+    margin-left: auto;
+    list-style: none;
+    justify-content: space-between; 
+}
+
+nav ul li {
+    margin-left: 40px;
+}
+
+nav ul li a {
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #bbbbbb;
+}
+
+nav ul li span {
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+nav #ulnav li a:hover {
+    text-decoration: none;
+    color: #111111;
+    transition: 0.2s ease-in-out;
+}
+
+.logonav #LogoNavigasi {
+    width: 180px;
+}
+
+nav button {
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+    outline: none;
+    font-weight: bold;
+}
+
+/*DropDown*/
+nav ul li ul {
+    position: absolute;
+    width: 200px;
+    background: #FFFFFF;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    margin-top: 27px;
+    height: auto;
+    padding: 10px;
+}
+
+.Dropdown ul li {
+    margin-left: 0px !important;
+}
+
+nav ul li ul li {
+    width: 100%;
+    padding: 10px;
+}
+
+nav ul li ul li:last-child {
+    border-bottom: none;
+}
+
+nav ul li ul li a {
+    color: #111111; 
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav ul li ul.Klik {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    transition: 0.3s ease;
+    transition-duration: 300ms;
+}
+
+nav .navsearch {
+    display: none;
+    padding: 10px;
+}
+
+nav #ulnav li:nth-child() {
+    border-bottom: 2px solid white;
+}
+
+
+
+/*-------------------------------------------------------------------
+[2. Konten]
+*------------------------------------------------------------------*/
+.Konten {
+    background: #222627;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+.Konten a {
+    color: #a6a6a6;
+    text-decoration: none;
+    font-family: 'Lato';
+}
+
+.Konten a:hover {
+    color: #8c00ff;
+}
+
+.JudulGambar, #FotoJudulGambar {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.category {
+    font-family: 'Lato';
+    font-size: 10px;
+    background-color: #8c00ff !important;
+    padding: 8px 15px 6px;
+    border-radius: 2px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFFFFF !important;
+    transition: 0.3s ease-in-out;
+}
+
+.category:hover {
+    background-color: #111111 !important;
+    color:#a6a6a6 !important;
+}
+
+.pembuat {
+    display: flex; 
+    align-items: center;
+}
+
+.nama {
+    font-family: 'Lato';
+    color: #595959 !important;
+    font-size: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.nama:hover {
+    color: #8c00ff !important;
+}
+
+.judul {
+    font-family: 'Lato';
+    color: #FFFFFF;
+    margin-top: 15px;
+}
+
+h2 {
+    font-family: 'Lato';
+    color: #FFFFFF;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.Konten h3 {
+    font-family: 'Lato';
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.Konten hr {
+    margin: 1rem 0;
+}
+
+.Konten p {
+    font-family: 'Lato';
+    color: #a6a6a6;
+    font-size: 15px;
+    line-height: 2 !important;
+}
+
+strong {
+    color: #bebebe;
+}
+
+.tanggal {
+    font-family: 'Lato';
+    margin: 0px 0px 0px 10px;
+    color: #acacac;
+}
+
+blockquote {
+    background: #181b1b;
+    border-left: .7rem solid #8c00ff;
+    margin: 1.5em .7rem;
+    padding: .5em .7rem;
+}
+
+blockquote p {
+    color: #FFFFFF !important;
+}
+
+blockquote a {
+    color: #8c00ff !important;
+}
+
+blockquote a:hover {
+    color: #ac46ff !important;
+}
+
+.st-count, .st-text {
+    color: #FFFFFF !important;
+}
+
+.Konten .Gambar {
+    width: 100%;
+}
+
+
+/*-------------------------------------------------------------------
+[4. Sidebar]
+*------------------------------------------------------------------*/
+.Sidebar {
+    width: 35%;
+    padding: 0px 50px;
+    background-color: #222627;
+}
+
+.SidebarWAJIB {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2%;
+}
+
+.Sidebar h2 {
+    font-size: 24px;
+    font-family: 'Avenir';
+    margin: 10px 0px 5px 0px;
+}
+
+.Sidebar p {
+    line-height: 2 !important;
+    font-size: 14px;
+}
+
+.Sidebar a {
+    font-family: 'Lato';
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.Sidebar a:hover {
+    color: #8c00ff;
+}
+
+.Sidebar form {
+    display: flex;
+}
+
+.Sidebar input {
+    width: 100%;
+    outline: none;
+    display: flex;
+    justify-content: end;
+    margin: 0px 0px 0px auto;
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid #AAA;
+    border-right: none;
+}
+
+.Sidebar button {
+    border: none;
+    outline: none;
+    background-color: rgb(74, 70, 151);
+    padding: 10px 20px;
+    color: #FFFFFF;
+    border-left: none;
+    cursor: pointer;
+}
+
+.Sidebar input:hover, .Sidebar input:active, .Sidebar input:focus {
+    width: 100%;
+    transition: 1s all;
+    border: 1px solid rgb(74, 70, 151);
+    border-right: none;
+}
+
+.garis {
+    width: 100%;
+    height: 1px;
+    background-color: #4e5152;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 10px;
+}
+
+.garis::after {
+    content: '';
+    background-color: #db4437;
+    width: 20%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    margin-left: 0;
+    bottom: 0;
+}
+
+.widget {
+    border: 1px solid #393c3d;
+    padding: 40px;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+
+.widget img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.widget p {
+    color: #FFFFFF;
+    font-family: 'Avenir';
+    text-align: center;
+    margin: 25px 0px;
+}
+
+.widget .sosmed {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.widget .sosmed a {
+    color: #a6a6a6;
+}
+
+.widget a:hover {
+    color: #8c00ff;
+}
+
+
+
+/*-------------------------------------------------------------------
+[5. Footer]
+*------------------------------------------------------------------*/
+.Footer {
+    width: 80%;
+    padding: 10px 3%;
+    background-color: #191c1d;
+    display: flex;
+    margin: 20px auto;
+}
+
+.FooterKiri {
+    width: 30%;
+    display: flex;
+    align-self: flex-start;
+    justify-content: flex-start;
+}
+
+.FooterKanan {
+    width: 70%;
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
+}
+
+.Footer a {
+    text-decoration: none;
+    color: #a6a6a6;
+    margin: 0px 10px;
+    font-size: 15px;
+    font-family: 'Poppins'; 
+}
+
+.Footer p {
+    text-decoration: none;
+    color: #a6a6a6;
+    margin: 0px 10px;
+    font-size: 15px;
+    font-family: 'Poppins'; 
+}
+
+
+
+/*-------------------------------------------------------------------
+[6. Penutup]
+*------------------------------------------------------------------*/
+.Penutup {
+    width: 80%;
+    padding: 10px 3%;
+    background-color: #191c1d;
+    display: flex;
+    margin: 20px auto 0px auto;
+    justify-content: center;
+}
+
+.Penutup a {
+    text-decoration: none;
+    color: #FFFFFF;
+    margin: 0px 10px;
+    font-size: 14px;
+    font-family: 'Poppins'; 
+}
+
+.Penutup p {
+    text-decoration: none;
+    color: #FFFFFF;
+    margin: 0px 10px;
+    font-size: 14px;
+    font-family: 'Poppins'; 
+}
+
+
+
+/*-------------------------------------------------------------------
+[7. Hamburger Navigasi]
+*------------------------------------------------------------------*/
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    opacity: 0;
+    left: -5px;
+    top: -3px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+    transition: 0.5s ease;
+}
+
+
+
+/*-------------------------------------------------------------------
+[8. Hamburger Navigasi -Animasinya-]
+*------------------------------------------------------------------*/
+.menu-toggle span:nth-child(2) {
+    background-color: black;
+    transform-origin: 0 0;
+    width: 34px;
+}
+
+.menu-toggle span:nth-child(3) {
+    background-color: White;
+    width: 29px;
+    margin-left: auto;
+}
+
+.menu-toggle span:nth-child(4) {
+    background-color: black;
+    transform-origin: 0 100%;
+    width: 24px;
+    margin-left: auto;
+}
+
+.menu-toggle input:checked ~ :nth-child(2) {
+    background-color: #ff0000;
+    transform: rotate(35deg) ;
+    width: 35px;
+}
+
+.menu-toggle input:checked ~ :nth-child(3) {
+    transform: scale(0);
+    opacity: 0;
+    width: 28px;
+}
+
+.menu-toggle input:checked ~ :nth-child(4) {
+    background-color: #ff0000;
+    transform: rotate(-35deg) translate(-1px, 3px);
+    width: 35px;
+}
+
+
+
+/*-------------------------------------------------------------------
+[9. Keyframes]
+*------------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------------
+[10. Breadcrumb]
+*------------------------------------------------------------------*/
+ul.breadcrumb {
+    display: flex;
+    padding: 30px 11% 30px 11%;
+    list-style: none;
+    width: 100%;
+    background-color: #222627;
+    align-items: center;
+  }
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 15px;
+    font-family: 'Avenir';
+    color: #a6a6a6;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 0px 0px 0px 8px;
+    color: #a6a6a6;
+    content: "/\00a0";
+}
+  
+ul.breadcrumb li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+ul.breadcrumb li a:hover {
+    color: #8c00ff;
+}
+
+
+
+/*-------------------------------------------------------------------
+[10. SebelumFooter]
+*------------------------------------------------------------------*/
+.SebelumFooter {
+    width: 100%;
+    background-color: #222627;
+    padding: 20px 0px;
+}
+
+
+
+/*-------------------------------------------------------------------
+[11. Komentar]
+*------------------------------------------------------------------*/
+#disqus_thread {
+    background-color: #222627;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    font-family: 'Avenir';
+}
+
+
+
+/*-------------------------------------------------------------------
+[12. Tombol Scroll Atas]
+*------------------------------------------------------------------*/
+.TombolScrollAtas {
+    width: 50px;
+    padding: 10px;
+    border: 0px solid #001F3F;
+    background-color: #0f1112;
+    position: fixed;
+    color: #FFFFFF;
+    margin: 92vh 0px 0px 95%;
+    cursor: pointer;
+    font-family: 'Avenir';
+    border-bottom: solid 4px #627295;
+    opacity: 0.7;
+}
+
+.TombolScrollAtas:active {
+    color: #F4F4F4;
+    font-weight: bold;
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    border-bottom: none;
+    opacity: 1;
+}
+
+.TombolScrollAtas:hover {
+    box-shadow: inset 0px 0px 0px 2px #AAA;
+}
+
+
+
+/*-------------------------------------------------------------------
+[13. Searching]
+*------------------------------------------------------------------*/
+#hasil {
+    font-family: 'Avenir';
+    font-weight: bold;
+}
+
+.Searching {
+    width: 77%;
+    display: flex;
+    background-color: #222627;
+    justify-content: flex-end;
+    margin: auto;
+}
+
+.Searching form {
+    display: flex;
+    width: 65%;
+}
+
+.Searching input {
+    width: 100%;
+    outline: none;
+    display: flex;
+    justify-content: end;
+    margin: 0px 0px 0px auto;
+    padding: 15px;
+    border-radius: 2px;
+    background-color: transparent;
+    border: none;
+    border-left: 1px solid #383838;
+    color: #a6a6a6;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.Searching button {
+    border: none;
+    outline: none;
+    background-color: #222627;
+    padding: 10px 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+
+
+/*-------------------------------------------------------------------
+[14. Header]
+*------------------------------------------------------------------*/
+.Header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #222627;
+}
+
+.SocialMediaHeader {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.SocialMediaHeader a {
+    display: flex;
+    color: #a6a6a6;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.SocialMediaHeader a:hover {
+    color: rgb(74, 70, 151);
+}
+
+.ticker {
+    overflow: hidden;
+    margin: auto;
+    margin-left: 20px;
+    width: 100%; 
+    height: 100%;
+    text-align: left;
+    background: #222627; 
+}
+  
+.ticker ul {
+    width: 100%;
+    position: relative;
+}
+  
+.ticker ul li {
+    width: 100%;
+    display: none;
+}
+
+.ticker ul li a {
+    text-decoration: none;
+    color: #a6a6a6;
+    font-family: 'Avenir';
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.ticker ul li a:hover {
+    color: #db4437;
+}
+
+#BreakingNews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #db4437;
+    font-family: 'Avenir';
+    font-weight: bold;
+}
+
+
+
+/*-------------------------------------------------------------------
+[15. Mode Malam]
+*------------------------------------------------------------------*/
+.ModeMalam {
+    position: fixed;
+    margin: 150vh 0px 0px -7%;
+    outline: none;
+}
+
+.label {
+    width: 50px; 
+    background-color: #111111;
+    display: flex;
+    border-radius: 50px;
+    height: 26px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.icon-moon-o {
+    color: #f1c40f;
+}
+
+.icon-sun {
+    color: #f39c12;
+}
+
+.ball {
+    background-color: #FFFFFF;
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(24px);
+}
+
+body.light, body.light .container, body.light .breadcrumb,
+body.light .SebelumFooter, body.light #disqus_thread {
+    background-color: #F4F4F4;
+    transition: background 0.2s linear;
+}
+
+body.light .Footer, body.light .Penutup, body.light .Akhir, body.light .KontenTerakhirCard, 
+body.light .KontenIsiKanan, body.light .IsiKanan, body.light .KontenTerakhir,
+body.light .Kanan::-webkit-scrollbar-track {
+    background: #FFFFFF;
+}
+
+body.light .breadcrumb li a, body.light .Sidebar a:hover {
+    color: rgb(74, 70, 151);
+}
+
+body.light .breadcrumb li a:hover {
+    font-weight: bold;
+}
+
+body.light .KontenTerakhir h1, 
+body.light .KontenIsiKanan h2,
+body.light .Konten h2, 
+body.light .Konten p,
+body.light .Konten strong,
+body.light .KontenTerakhirCard h2, 
+body.light .Akhir p, 
+body.light .Akhir a,
+body.light .Sidebar h2,
+body.light .Sidebar a,
+body.light .breadcrumb li {
+    color: #111111 !important;
+}
+
+body.light .Konten a {
+    color: rgb(74, 70, 151);
+}
+
+body.light .Konten a:hover {
+    color: rgb(52, 50, 82);
+}
+
+body.light .Konten blockquote {
+    background-color: #f0f0f0;
+}
+
+body.light .Konten {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+    padding: 20px;
+}
+
+body.light .Sidebar {
+    background-color: #F4F4F4;
+    transition: background 0.2s linear;
+    padding: 0px 20px;
+}
+
+body.light .KontenUtama {
+    background-color: #6d6d6d2f;
+}
+
+body.light nav ul li ul {
+    background-color: rgb(74, 70, 151);
+}
+
+body.light .Akhir {
+    border-top: 5px solid #AAAAAA;
+}
+
+body.light .TombolScrollAtas {
+    background-color: rgb(74, 70, 151);
+    border-bottom: solid 4px #AAAAAA;
+}
+
+body.light nav ul li ul a {
+    color: #FFFFFF;
+}
+
+body.light .Kanan::-webkit-scrollbar-thumb {
+    background: rgb(74, 70, 151);
+    border-radius: 3px;
+}
+
+body.light .widget {
+    background: #FFFFFF;
+    border: none;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+}

@@ -1,0 +1,731 @@
+/*------------------------------------------------------------------
+[Adityawarman Dewa Putra] [SMKN 1 JAKARTA] 
+
+Copyright 2020 By: Dewa Programming
+
+Project		:	Blog
+Dibuat	    :	05/05/2020
+Instagram   :   @dewaprogramming -- @741_dewa -- @dewasmkn1jakarta
+-------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------
+[Judul]
+
+0. Biasa
+1. Navigasi
+2. Landing Page
+3. Konten
+4. Sidebar 
+5. Footer
+6. Penutup
+7. Hamburger Navigasi
+8. Hamburger Navigasi -Animasinya-
+9. Waktu PHP
+10. Pagination 
+11. Keyframes
+12. Breadcrumb
+13. Tombol Scroll Atas
+14. Tag Button
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+[NOTE]
+COPY PASTE PUNYA ORANG LAIN TANPA IZIN ITU DOSA
+IZIN TERLEBIH DAHULU. TERIMAKASIH :)
+-------------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------------
+[0. Biasa]
+*------------------------------------------------------------------*/
+@font-face {
+    font-family: 'Quicksand'; 
+    src: url('../../Fonts/Quicksand.woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../../Fonts/Poppins.woff2');
+}
+
+@font-face {
+    font-family: 'Lato'; 
+    src: url('../../Fonts/Lato.woff2');
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../../Fonts/Ubuntu.woff2');
+}
+
+@font-face {
+    font-family: 'Avenir'; 
+    src: url('../../Fonts/Avenir.woff2');
+}
+
+body {
+    background: #EEE;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: #455a64;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #0B549F;
+}
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+div img[alt="www.000webhost.com"], div img[alt='www.000webhost.com']
+{ 
+    display:none;visibility:hidden;
+}
+
+.container {
+    padding: 50px 170px 70px 170px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #EEE;
+}
+
+.ContainerUtama {
+    background-color: #FFFFFF;
+    padding: 50px 50px 25px 50px;
+}
+
+.Akhir {
+    background-color: #FFFFFF;
+    -webkit-box-shadow: inset 0px 5px 0px -3px #AAA; 
+    box-shadow: inset 0px 5px 0px -3px #AAA;
+}
+
+
+
+/*-------------------------------------------------------------------
+[1. Navigasi]
+*------------------------------------------------------------------*/
+nav {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(43,43,201,1) 0%, rgba(0,184,222,1) 77%);
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 15%;
+    padding-right: 15%;
+    width: 100%;
+    color: #FFFFFF;
+    font-family: 'Quicksand', sans-serif;
+    -webkit-box-shadow: 0px 8px 5px 0px rgba(235,235,235,1);
+    -moz-box-shadow: 0px 8px 5px 0px rgba(235,235,235,1);
+    box-shadow: 0px 8px 5px 0px rgba(235,235,235,1);   
+}   
+
+nav ul {
+    display: flex;
+    margin-left: auto;
+    list-style: none;
+    justify-content: space-between; 
+}
+
+nav ul li {
+    margin-right: 40px;
+}
+
+
+nav ul li a {
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+nav ul li span {
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: #DDDDDD;
+    transition: 0.1s ease;
+}
+
+.logonav {
+    
+}
+
+nav button {
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    outline: none;
+}
+
+/*DropDown*/
+nav ul li ul {
+    position: absolute;
+    width: 260px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(43,43,201,1) 0%, rgba(43,43,201,1) 77%);
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    margin: 30px 0px 0px 0px;
+    height: 100px;
+}
+
+nav ul li ul li {
+    padding: 10px;
+}
+
+nav ul li ul li:last-child {
+    border-bottom: none;
+}
+
+nav ul li ul li a {
+    color: #FFFFFF; 
+    font-size: 13px;
+}
+
+nav ul li ul.Klik {
+    visibility: visible;
+    opacity: 1;
+    height: 180px;
+    transition: 0.3s ease;
+}
+
+
+
+/*-------------------------------------------------------------------
+[2. Landing Page]
+*------------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------------
+[3. Konten]
+*------------------------------------------------------------------*/
+.Konten {
+    color: black;
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    margin: 0px 0px 20px 0px;
+}
+
+.Konten img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.Konten img:hover {
+    width: 100%;
+    opacity: 0.9;
+    transition: 0.5s ease;
+    transform: scale(1.1);
+}
+
+.card {
+    background-color: #EEE;
+    width: 25%;
+    padding: 0px 10px;
+    margin-bottom: 80px;
+    border-radius: 5px;
+}
+
+.KontenCard {
+    background-color: #FFFFFF;
+    padding: 0px 0px 5px 0px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 23px -7px rgba(0,0,0,0.18); 
+    box-shadow: 0px 0px 23px -7px rgba(0,0,0,0.18);
+    overflow: hidden;
+}
+
+.Konten p {
+    text-align: center;
+    padding: 5px 0px;
+}
+
+.container p, .ContainerUtama p {
+    font-weight: 200;
+    font-family: 'Avenir';
+}
+
+.Konten #Tag {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0B549F;
+    font-size: 15px;
+    font-family: 'Quicksand';
+    text-align: center;
+}
+
+.Konten #Tag:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: #2a6cad;
+}
+
+.container h1, .ContainerUtama h1 {
+    font-family: 'Poppins';
+    text-align: center;
+    font-size: 30px;
+}
+
+.container h2, .ContainerUtama h2 {
+    font-family: 'Ubuntu';
+    font-size: 20px;
+}
+
+.container hr, .ContainerUtama hr {
+    width: 30%;
+    margin: auto auto 20px auto;
+}
+
+
+
+/*-------------------------------------------------------------------
+[4. Sidebar]
+*------------------------------------------------------------------*/
+.Sidebar {
+    background: #EEE;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    padding: 20px;
+}
+
+.Sidebar h2 {
+    text-align: center;
+    font-family: 'Quicksand';
+}
+
+.Sidebar a {
+    text-decoration: none;
+    color: black;
+    margin: 2px 0px 2px 0px;
+}
+
+.Sidebar p {
+    text-decoration: none;
+    color: black;
+    margin: 2px 0px 2px 0px;
+}
+
+.Sidebar a:hover {
+    text-decoration: none;
+    color: #0275d8;
+}
+
+.Sidebar hr {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.Sidebar span {
+    margin: 0px auto 0px auto;
+    width: 80%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+
+/*-------------------------------------------------------------------
+[5. Footer]
+*------------------------------------------------------------------*/
+.Footer {
+    width: 80%;
+    padding: 10px 3%;
+    background-color: #FFFFFF;
+    display: flex;
+    margin: 20px auto;
+    -webkit-box-shadow: inset 0px 5px 0px -3px #AAA; 
+    box-shadow: inset 0px 5px 0px -3px #AAA;
+}
+
+.FooterKiri {
+    width: 30%;
+    display: flex;
+    align-self: flex-start;
+    justify-content: flex-start;
+}
+
+.FooterKanan {
+    width: 70%;
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
+}
+
+.Footer a {
+    text-decoration: none;
+    color: #5c5c5c;
+    margin: 0px 10px;
+    font-size: 15px;
+    font-family: 'Poppins'; 
+}
+
+.Footer p {
+    text-decoration: none;
+    color: #5c5c5c;
+    margin: 0px 10px;
+    font-size: 15px;
+    font-family: 'Poppins'; 
+}
+
+
+
+/*-------------------------------------------------------------------
+[6. Penutup]
+*------------------------------------------------------------------*/
+.Penutup {
+    width: 80%;
+    padding: 10px 3%;
+    background-color: #FFFFFF;
+    display: flex;
+    margin: 20px auto 0px auto;
+    justify-content: center;
+}
+
+.Penutup a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin: 0px 10px;
+    font-size: 14px;
+    font-family: 'Poppins'; 
+}
+
+.Penutup p {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin: 0px 10px;
+    font-size: 14px;
+    font-family: 'Poppins'; 
+}
+
+
+
+/*-------------------------------------------------------------------
+[7. Hamburger Navigasi]
+*------------------------------------------------------------------*/
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    opacity: 0;
+    left: -5px;
+    top: -3px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+    transition: 0.5s ease;
+}
+
+
+
+/*-------------------------------------------------------------------
+[8. Hamburger Navigasi -Animasinya-]
+*------------------------------------------------------------------*/
+.menu-toggle span:nth-child(2) {
+    background-color: black;
+    transform-origin: 0 0;
+    width: 34px;
+}
+
+.menu-toggle span:nth-child(3) {
+    background-color: White;
+    width: 29px;
+    margin-left: auto;
+}
+
+.menu-toggle span:nth-child(4) {
+    background-color: black;
+    transform-origin: 0 100%;
+    width: 24px;
+    margin-left: auto;
+}
+
+.menu-toggle input:checked ~ :nth-child(2) {
+    background-color: #ff0000;
+    transform: rotate(35deg) ;
+    width: 35px;
+}
+
+.menu-toggle input:checked ~ :nth-child(3) {
+    transform: scale(0);
+    opacity: 0;
+    width: 28px;
+}
+
+.menu-toggle input:checked ~ :nth-child(4) {
+    background-color: #ff0000;
+    transform: rotate(-35deg) translate(-1px, 3px);
+    width: 35px;
+}
+
+
+
+/*-------------------------------------------------------------------
+9. Waktu PHP]
+*------------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------------
+[10. Pagination]
+*------------------------------------------------------------------*/
+.Pagination {
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Pagination button {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.Back button {
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    padding: 15px 20px;
+    color: #111111;
+    font-weight: bold;
+    cursor: pointer;
+    height: 100%;
+}
+
+.Next button {
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    padding: 15px 20px;
+    color: #111111;
+    font-weight: bold;
+    cursor: pointer;
+    height: 100%;
+}
+
+.Pagination a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    margin: auto 0px;
+}
+
+.Pagination a:hover {
+    color: black;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    margin: auto 0px;
+}
+
+.Pagination span {
+    text-align: center;
+    border: 1px solid #DDDDDD;
+    padding: 10px 20px;
+    height: 70%;
+    margin: auto 0px;
+}
+
+.Pagination span:hover {
+    text-align: center;
+    border: 1px solid #DDDDDD;
+    padding: 12px 23px;
+    height: 70%;
+    margin: auto 0px;
+}
+
+.active {
+    background-color: #0B549F;
+    color: #FFFFFF;
+    font-weight: bolder;
+}
+
+
+
+/*-------------------------------------------------------------------
+[11. Keyframes]
+*------------------------------------------------------------------*/
+@keyframes Headset {
+
+    from {
+        transform: translateY(-10px); 
+    }
+
+    to {
+        transform: translateY(-20px);
+    }
+
+}
+
+@keyframes Daun {
+
+    from {
+        transform: translateY(50px); 
+    }
+
+    to {
+        transform: translateY(60px);
+    }
+
+}
+
+@keyframes Baju {
+
+    from {
+        transform: translateY(50px); 
+    }
+
+    to {
+        transform: translateY(60px);
+    }
+
+}
+
+@keyframes LingkaranLaptop {
+
+    from {
+        fill: #FFFFFF; 
+    }
+
+    to {
+        fill: #001F3F;
+    }
+
+}
+
+
+
+/*-------------------------------------------------------------------
+[12. Breadcrumb]
+*------------------------------------------------------------------*/
+ul.breadcrumb {
+    display: flex;
+    padding: 30px 0px;
+    list-style: none;
+    width: 75%;
+    margin: auto;
+    background-color: #EEE;
+    align-items: center;
+  }
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 15px;
+    font-family: 'Avenir';
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+  
+
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: #01447e;
+}
+
+
+
+/*-------------------------------------------------------------------
+[13.Tombol Scroll Atas]
+*------------------------------------------------------------------*/
+.TombolScrollAtas {
+    width: 50px;
+    padding: 10px;
+    border: 0px solid #001F3F;
+    background-color: #01447e;
+    position: fixed;
+    color: #FFFFFF;
+    margin: 92vh 0px 0px 95%;
+    cursor: pointer;
+    font-family: 'Avenir';
+    border-bottom: solid 4px #627295;
+    opacity: 0.7;
+}
+
+.TombolScrollAtas:active {
+    color: #F4F4F4;
+    font-weight: bold;
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    border-bottom: none;
+    opacity: 1;
+}
+
+.TombolScrollAtas:hover {
+    box-shadow: inset 0px 0px 0px 2px #AAA;
+}
+
+
+
+/*-------------------------------------------------------------------
+14.Tag Button
+*------------------------------------------------------------------*/
+.ContainerTagButton {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.ContainerTagButton a {
+    width: 20%;
+    margin: 0px 10px;
+}
+
+.TagButton {
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+    font-family: 'Poppins';
+    border: 0px solid;
+    outline: none;
+    background: linear-gradient(90deg, rgb(245, 245, 245) 0%, rgb(86, 86, 255) 0%, rgb(0, 122, 192) 77%);
+    cursor: pointer;
+    color: white;
+}

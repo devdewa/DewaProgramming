@@ -1,0 +1,51 @@
+/*------------------------------------------------------------------
+[Adityawarman Dewa Putra] [SMKN 1 JAKARTA] 
+
+Copyright 2020 By: Dewa Programming
+
+Project		:	Blog
+Dibuat	    :	05/05/2020
+Instagram   :   @dewaprogramming -- @741_dewa -- @dewasmkn1jakarta
+-------------------------------------------------------------------*/
+
+
+
+/* Smartphone */
+@media only screen and (max-width: 650px) {
+    .kiri {
+        display: none;
+    }
+
+    .kanan {
+        margin-left: 0 !important;
+        padding: 0px 0px;
+    }
+
+    .col-md-12, .col-sm-12  {
+        width: 100% !important;
+    }
+
+    .form-control {
+        width: 100% !important;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 651px) and (max-width: 1200px) {
+    .kiri {
+        display: none;
+    }
+
+    .kanan {
+        margin-left: 0 !important;
+        padding: 0px 0px;
+    }
+
+    .col-md-12, .col-sm-12  {
+        width: 100% !important;
+    }
+
+    .form-control {
+        width: 100% !important;
+    }
+}

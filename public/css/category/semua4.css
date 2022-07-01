@@ -1,0 +1,387 @@
+/*------------------------------------------------------------------
+[Adityawarman Dewa Putra] [SMKN 1 JAKARTA] 
+
+Copyright 2020 By: Dewa Programming
+
+Project		:	Blog
+Dibuat	    :	05/05/2020
+Instagram   :   @dewaprogramming -- @741_dewa -- @dewasmkn1jakarta
+-------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------
+[Judul]
+
+0. Biasa
+1. Navigasi
+2. Landing Page
+3. Konten
+4. Sidebar 
+5. Footer
+6. Penutup
+7. Hamburger Navigasi
+8. Hamburger Navigasi -Animasinya-
+9. Waktu PHP
+10. Pagination 
+11. Keyframes
+12. Breadcrumb
+13. Tombol Scroll Atas
+14. Tag Button
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+[NOTE]
+COPY PASTE PUNYA ORANG LAIN TANPA IZIN ITU DOSA
+IZIN TERLEBIH DAHULU. TERIMAKASIH :)
+-------------------------------------------------------------------*/
+
+
+
+/* Tablet*/
+@media only screen and (min-width: 651px) and (max-width: 1200px) {
+
+    /*-------------------------------------------------------------------
+    [0. Biasa]
+    *------------------------------------------------------------------*/
+    .container {
+        margin-top: 50px;
+        padding: 0px 90px 70px 90px;
+        width: 100%;
+    }
+
+    .ContainerUtama {
+        background-color: #FFFFFF;
+        padding: 10px;
+    }
+    
+    /*-------------------------------------------------------------------
+    [1. Navigasi]
+    *------------------------------------------------------------------*/
+    nav {
+        display: flex;
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(43,43,201,1) 0%, rgb(64, 115, 255) 77%);
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+        position: relative;
+        color: #0B549F;
+        font-family: 'Comic Neue', cursive;
+        -webkit-box-shadow: 0px 0px 0px 0px rgba(235,235,235,1);
+        -moz-box-shadow: 0px 0px 0px 0px rgba(235,235,235,1);
+        box-shadow: 0px 0px 0px 0px rgba(235,235,235,1);   
+    }
+
+    nav ul {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgb(240, 240, 240);
+        align-items: flex-start;
+        justify-content: space-evenly;
+        transition: 0.5s ease;
+        opacity: 0;
+        visibility: hidden;
+        padding: 15px;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        visibility: unset;
+    }
+
+    nav.navfixed {
+ 
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: rgb(38, 111, 184);
+        margin-right: 0;
+    }
+
+    nav ul li a:hover {
+        text-decoration: none;
+        color: black;
+        margin-right: 0px;
+        transition: 0.1s ease;
+    }
+
+    nav ul li span {
+        font-family: 'Quicksand', sans-serif;
+        text-decoration: none;
+        color: rgb(38, 111, 184);
+        margin-right: 40px;
+    }
+
+    .logonav {
+        display: flex;
+        margin: 0px auto 0px 0px;
+    }
+
+    .logonav #LogoNavigasi {
+        width: 130px;
+    }
+
+    nav button {
+        background-color: transparent;
+        border: transparent;
+        cursor: pointer;
+        color: white;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 15px;
+        text-align: start;
+        outline: none;
+    }
+    
+    /*DropDown*/
+    nav ul li ul {
+        position: absolute;
+        width: 260px;
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(43,43,201,1) 0%, rgba(43,43,201,1) 77%);
+        display: flex;
+        justify-content: space-between;
+        visibility: hidden;
+        opacity: 0;
+        height: 40vh;
+        margin: 20vh 0px 0px 30vh;
+    }
+    
+    nav ul li ul li {
+        padding: 10px;
+    }
+    
+    nav ul li ul li:last-child {
+        border-bottom: none;
+    }
+    
+    
+    nav ul li ul li a {
+        color: #FFFFFF; 
+        font-size: 13px;
+    }
+    
+    nav ul li ul.Klik {
+        visibility: visible;
+        opacity: 1;
+        transition: 0.2s ease-in-out;
+        height: 45vh;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /*-------------------------------------------------------------------
+    [2. Landing Page]
+    *------------------------------------------------------------------*/
+   
+
+
+    /*-------------------------------------------------------------------
+    [3. Konten]
+    *------------------------------------------------------------------*/   
+    .Konten {
+        color: black;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0px;
+        margin: 20px 0px 20px 0px;
+    }
+
+    .Konten img {
+        width: 100%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .Konten img:hover {
+        width: 100%;
+        opacity: 0.9;
+        transition: 0.5s ease;
+    }
+
+    .card {
+        width: 50%;
+        padding: 0px 10px;
+        margin-bottom: 80px;
+        border-radius: 5px;
+    }
+
+    .KontenCard {
+        padding: 0px 0px 5px 0px;
+        border-radius: 5px;
+    }
+
+    .Konten p {
+        text-align: center;
+    }
+
+    .container p, .ContainerUtama p {
+        font-weight: 200;
+        font-family: 'Avenir';
+    }
+
+    .Konten #Tag {
+        text-decoration: none;
+        font-weight: bold;
+        color: #0B549F;
+        font-size: 15px;
+        font-family: 'Quicksand';
+        text-align: center;
+    }
+
+    .Konten #Tag:hover {
+        text-decoration: none;
+        font-weight: bold;
+        color: #2a6cad;
+    }
+
+    .container h1, .ContainerUtama h1 {
+        font-family: 'Poppins';
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .container h2, .ContainerUtama h2 {
+        font-family: 'Ubuntu';
+        font-size: 20px;
+    }
+
+    .container hr, .ContainerUtama hr {
+        width: 50%;
+        margin: auto auto 20px auto;
+    }
+
+    /*-------------------------------------------------------------------
+    [5. Footer]
+    *------------------------------------------------------------------*/
+    .Footer {
+        width: 100%;
+        padding: 10px 3%;
+        background-color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        margin: 20px auto;
+    }
+
+    .FooterKiri {
+        width: 100%;
+        display: flex;
+        align-self: center;
+        justify-content: space-evenly;
+    }
+
+    .FooterKanan {
+        width: 100%;
+        display: flex;
+        margin: 20px 0px 0px 0px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .FooterKanan a {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #AAA;
+        padding: 10px
+    }
+
+    .Footer a,p {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        margin: 0px 10px;
+        font-size: 15px;
+    }
+
+    /*-------------------------------------------------------------------
+    [7. Hamburger Navigasi]
+    *------------------------------------------------------------------*/
+    .menu-toggle {
+        display: flex;
+    }
+
+    /*-------------------------------------------------------------------
+    [8. Hamburger Navigasi -Animasinya-]
+    *------------------------------------------------------------------*/
+
+    /*-------------------------------------------------------------------
+    [9. Waktu PHP]
+    *------------------------------------------------------------------*/
+    .Konten span {
+        font-size: 15px;
+        color: rgb(110, 110, 110);
+        cursor: pointer;
+        margin-left: 10px;
+        margin-top: 2px;
+    }
+
+    /*-------------------------------------------------------------------
+    [10. Pagination]
+    *------------------------------------------------------------------*/
+    .Pagination {
+        width: 70%;
+        display: flex;
+        margin: auto;
+        justify-content: space-evenly;
+    }
+
+    /*-------------------------------------------------------------------
+    [11. Keyframes]
+    *------------------------------------------------------------------*/
+
+    /*-------------------------------------------------------------------
+    [12. Breadcrumb]
+    *------------------------------------------------------------------*/
+    ul.breadcrumb {
+        display: flex;
+        padding: 30px 20px;
+        list-style: none;
+        width: 100%;
+        margin: auto;
+        background-color: #EEE;
+        align-items: center;
+      }
+    
+    ul.breadcrumb li {
+        display: inline;
+        font-size: 15px;
+    }
+    
+    ul.breadcrumb li+li:before {
+        padding: 8px;
+        color: black;
+        content: "/\00a0";
+    }
+      
+    
+    ul.breadcrumb li a {
+        color: #0275d8;
+        text-decoration: none;
+    }
+    
+    ul.breadcrumb li a:hover {
+        color: #01447e;
+        text-decoration: underline;
+    }
+
+    /*-------------------------------------------------------------------
+    [13.Tombol Scroll Atas]
+    *------------------------------------------------------------------*/
+    .TombolScrollAtas {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    /*-------------------------------------------------------------------
+    14.Tag Button
+    *------------------------------------------------------------------*/
+    .ContainerTagButton a {
+        width: 100%;
+        margin: 10px 10px;
+    }
+
+}

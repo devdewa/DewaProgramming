@@ -1,0 +1,739 @@
+/*------------------------------------------------------------------
+[Adityawarman Dewa Putra] [SMKN 1 JAKARTA] 
+
+Copyright 2020 By: Dewa Programming
+
+Project		:	Blog
+Dibuat	    :	05/05/2020
+Instagram   :   @dewaprogramming -- @741_dewa -- @dewasmkn1jakarta
+-------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------
+[Judul]
+
+0. Biasa
+1. Navigasi
+2. Konten
+3. Sidebar
+4. Footer
+5. Penutup
+6. Hamburger Navigasi
+7. Hamburger Navigasi -Animasinya-
+8. Breadcrumb
+9. SebelumFooter
+10. Komentar
+11. Tombol Scroll Atas
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+[NOTE]
+COPY PASTE PUNYA ORANG LAIN TANPA IZIN ITU DOSA
+IZIN TERLEBIH DAHULU. TERIMAKASIH :)
+-------------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------------
+[0. Biasa]
+*------------------------------------------------------------------*/
+@font-face {
+    font-family: 'Quicksand'; 
+    src: url('../../fonts/Quicksand.woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../../fonts/Poppins.woff2');
+}
+
+@font-face {
+    font-family: 'Lato'; 
+    src: url('../../fonts/Lato.woff2');
+}
+
+@font-face {
+    font-family: 'Ubuntu'; 
+    src: url('../../fonts/Ubuntu.woff2');
+}
+
+@font-face {
+    font-family: 'Avenir'; 
+    src: url('../../fonts/Avenir.woff2');
+}
+
+
+body {
+    background-color: #EEE;
+    margin: 0;
+    padding: 0;
+    
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: #455a64;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #0B549F;
+}
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+div img[alt="www.000webhost.com"], div img[alt='www.000webhost.com']
+{ 
+    display:none;visibility:hidden;
+}
+
+.container {
+    padding: 0px 170px 70px 170px;
+    width: 100%;
+    display: flex;
+    background: #EEE;
+}
+
+.Akhir {
+    border-top: 5px solid #DDD;
+    background-color: #FFFFFF;
+}
+
+
+
+/*-------------------------------------------------------------------
+[1. Navigasi]
+*------------------------------------------------------------------*/
+nav {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(43,43,201,1) 0%, rgba(0,184,222,1) 77%);
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 15%;
+    padding-right: 15%;
+    width: 100%;
+    color: #FFFFFF;
+    font-family: 'Quicksand', sans-serif;
+    -webkit-box-shadow: 0px 8px 5px 0px rgba(235,235,235,1);
+    -moz-box-shadow: 0px 8px 5px 0px rgba(235,235,235,1);
+    box-shadow: 0px 8px 5px 0px rgba(235,235,235,1);   
+}   
+
+nav ul {
+    display: flex;
+    margin-left: auto;
+    list-style: none;
+    justify-content: space-between; 
+}
+
+nav ul li {
+    margin-right: 40px;
+}
+
+
+nav ul li a {
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+nav ul li span {
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: #DDDDDD;
+    transition: 0.1s ease;
+}
+
+.logonav {
+    
+}
+
+nav button {
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    outline: none;
+}
+
+/*DropDown*/
+nav ul li ul {
+    position: absolute;
+    width: 260px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(43,43,201,1) 0%, rgba(43,43,201,1) 77%);
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    margin: 30px 0px 0px 0px;
+    height: 100px;
+}
+
+nav ul li ul li {
+    padding: 10px;
+}
+
+nav ul li ul li:last-child {
+    border-bottom: none;
+}
+
+nav ul li ul li a {
+    color: #FFFFFF; 
+    font-size: 13px;
+}
+
+nav ul li ul.Klik {
+    visibility: visible;
+    opacity: 1;
+    height: 180px;
+    transition: 0.3s ease;
+}
+
+
+/*-------------------------------------------------------------------
+[2. Konten]
+*------------------------------------------------------------------*/
+.konten {
+    background: #FFFFFF;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2); 
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+
+.konten p {
+    font-family: 'Lato';
+    font-size: 16px;
+}
+
+.konten span {
+    font-family: 'Avenir';
+    font-size: 14px;
+}
+
+.konten b {
+    color: black;
+    font-family: 'Avenir'; 
+    font-size: 15px;
+}
+
+.konten #Tag {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0B549F;
+    font-size: 15px;
+    font-family: 'Quicksand';
+}
+
+.konten #Tag:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: #2a6cad;
+}
+
+.konten hr {
+    height: 0.5px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.konten h1 {
+    font-size: 30px;
+    font-family: 'Avenir'; 
+    margin-bottom: 10px;
+}
+
+.konten h2 {
+    font-size: 28px;
+    font-family: 'Avenir'; 
+    margin-bottom: 10px;
+}
+
+.konten h3 { 
+    font-size: 23px;
+    font-family: 'Lato'; 
+    margin-bottom: 10px;
+}
+
+.konten h4 {
+    font-size: 14px;
+    font-family: 'Quicksand'; 
+}
+
+.konten h5, .konten h6 {
+    font-family: 'Lato'; 
+}
+
+.konten a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+.konten .flex {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.konten pre { 
+    margin: 1em 0; 
+    padding: .5em!important; 
+    display: block; 
+    background-color: #333; 
+    color: white; 
+    border-left: 5px solid #2196f3!important;
+    border-radius: .3em;
+    overflow: auto;
+}
+pre .nocode { background-color: none; color: #fff }
+pre .str { color: #ffa0a0 }
+pre .kwd { color: #f0e68c; font-weight: bold }
+pre .com { color: #87ceeb }
+pre .typ { color: #98fb98 }
+pre .lit { color: #f92672 }
+pre .pun { color: #fff }
+pre .pln { color: #fff }
+pre .tag { color: #f92672; font-weight: bold }
+pre .atn { color: #7667ff; font-weight: bold }
+pre .atv { color: #00ff15 }
+pre .dec { color: #f92672 }
+pre span {font-family: monospace !important;}
+
+.ContainerCard {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.kontenCard {
+    background-color: #FFFFFF;
+    padding: 0px 0px 10px 0px;
+    -webkit-box-shadow: 0px 0px 23px -7px rgba(0,0,0,0.18); 
+    box-shadow: 0px 0px 23px -7px rgba(0,0,0,0.18);
+}
+
+.konten .card img {
+    width: 100%;
+    height: 100%;
+}
+
+.konten .card img:hover {
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    transition: 0.5s ease;
+}
+
+.konten .card {
+    background-color: #FFFFFF;
+    width: 45%;
+    padding: 0px 10px;
+    margin-bottom: 50px;
+}
+
+.konten .card h4, .konten .card p {
+    color: black;
+    font-family: 'Poppins';  
+    font-size: 18px;
+    margin: 0% 0% 0% 10%;
+    font-weight: 100;
+}
+
+blockquote {
+    background: #fff;
+    border-left: .7rem solid #007bff;
+    margin: 1.5em .7rem;
+    padding: .5em .7rem;
+}
+
+table {
+    background: #FFFFFF;
+}
+
+th {
+    background: #DDD;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Ubuntu'; 
+}
+
+td {
+    background: #FFFFFF;
+    padding: 10px 0px;
+    font-family: 'Ubuntu';
+    width: 25%; 
+}
+
+
+
+/*-------------------------------------------------------------------
+[3. Sidebar]
+*------------------------------------------------------------------*/
+.Sidebar {
+    background: #EEE;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    padding: 20px;
+}
+
+.Sidebar h2 {
+    font-size: 20px;
+    font-family: 'Avenir';
+    margin: 0px 0px 10px 0px;
+}
+
+.Sidebar a {
+    text-decoration: none;
+    color: black;
+    margin: 3px 0px 3px 0px;
+    font-size: 14px;
+}
+
+.Sidebar p {
+    text-decoration: none;
+    color: black;
+    margin: 3px 0px 3px 0px;
+    font-family: 'Avenir';
+}
+
+.Sidebar p:hover {
+    text-decoration: none;
+    color: #0275d8;
+}
+
+.Sidebar a:hover {
+    text-decoration: none;
+    color: #0275d8;
+}
+
+.Sidebar hr {
+    height: 0.1px;
+    background-color: #AAA;
+    border: none;
+}
+
+.Sidebar span {
+    margin: 0px auto 0px auto;
+    width: 80%;
+}
+
+.SemuaBahasa {
+    width: 100%;
+    background: #DDD;
+    padding: 10px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2); 
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+
+.SemuaBahasa button {
+    background: #FFFFFF;
+    cursor: pointer;
+    width: 100%;
+    margin: 7px 0px;
+    border: 0px;
+    padding: 5px;
+    border-right: solid 4px #668ad8;
+    border-radius: 0 15px 15px 0;
+    outline: none;
+    font-family: 'Avenir';
+    text-align: start;
+    transition: 0.3s ease-in-out;
+}
+
+#HTML:hover {
+    font-weight: bold;
+    color: white;
+    background: #F4450E;
+}
+
+#CSS:hover {
+    font-weight: bold;
+    color: white;
+    background: #2196F3;
+}
+
+#Javascript:hover {
+    font-weight: bold;
+    color: white;
+    background: #EBB828;
+}
+
+#Bootstrap:hover {
+    font-weight: bold;
+    color: white;C; 
+    background: #563D7C;
+}
+
+#Others:hover {
+    font-weight: bold;
+    color: white;
+    background: #111111;
+}
+
+.SidebarWAJIB {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5%;
+}
+
+
+
+/*-------------------------------------------------------------------
+[4. Footer]
+*------------------------------------------------------------------*/
+.Footer {
+    width: 80%;
+    padding: 10px 3%;
+    background-color: #FFFFFF;
+    display: flex;
+    margin: 20px auto;
+}
+
+.FooterKiri {
+    width: 30%;
+    display: flex;
+    align-self: flex-start;
+    justify-content: flex-start;
+}
+
+.FooterKanan {
+    width: 70%;
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
+}
+
+.Footer a {
+    text-decoration: none;
+    color: #5c5c5c;
+    margin: 0px 10px;
+    font-size: 15px;
+    font-family: 'Poppins'; 
+}
+
+.Footer p {
+    text-decoration: none;
+    color: #5c5c5c;
+    margin: 0px 10px;
+    font-size: 15px;
+    font-family: 'Poppins'; 
+}
+
+
+
+/*-------------------------------------------------------------------
+[5. Penutup]
+*------------------------------------------------------------------*/
+.Penutup {
+    width: 80%;
+    padding: 10px 3%;
+    background-color: #FFFFFF;
+    display: flex;
+    margin: 20px auto 0px auto;
+    justify-content: center;
+}
+
+.Penutup a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin: 0px 10px;
+    font-size: 14px;
+    font-family: 'Poppins'; 
+}
+
+.Penutup p {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin: 0px 10px;
+    font-size: 14px;
+    font-family: 'Poppins'; 
+}
+
+
+
+
+/*-------------------------------------------------------------------
+[6. Hamburger Navigasi]
+*------------------------------------------------------------------*/
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    outline: none;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    opacity: 0;
+    left: -5px;
+    top: -3px;
+    cursor: pointer;
+    z-index: 2;
+    outline: none;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+    transition: 0.5s ease;
+}
+
+
+
+/*-------------------------------------------------------------------
+[7. Hamburger Navigasi -Animasinya-]
+*------------------------------------------------------------------*/
+.menu-toggle span:nth-child(2) {
+    background-color: black;
+    transform-origin: 0 0;
+    width: 34px;
+}
+
+.menu-toggle span:nth-child(3) {
+    background-color: White;
+    width: 29px;
+    margin-left: auto;
+}
+
+.menu-toggle span:nth-child(4) {
+    background-color: black;
+    transform-origin: 0 100%;
+    width: 24px;
+    margin-left: auto;
+}
+
+.menu-toggle input:checked ~ :nth-child(2) {
+    background-color: #ff0000;
+    transform: rotate(35deg) ;
+    width: 35px;
+}
+
+.menu-toggle input:checked ~ :nth-child(3) {
+    transform: scale(0);
+    opacity: 0;
+    width: 28px;
+}
+
+.menu-toggle input:checked ~ :nth-child(4) {
+    background-color: #ff0000;
+    transform: rotate(-35deg) translate(-1px, 3px);
+    width: 35px;
+}
+
+
+
+/*-------------------------------------------------------------------
+[8. Breadcrumb]
+*------------------------------------------------------------------*/
+ul.breadcrumb {
+    display: flex;
+    padding: 30px 0px;
+    list-style: none;
+    width: 75%;
+    margin: auto;
+    background-color: #EEE;
+    align-items: center;
+  }
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 15px;
+    font-family: 'Avenir';
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+  
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+
+
+/*-------------------------------------------------------------------
+[9. SebelumFooter]
+*------------------------------------------------------------------*/
+.SebelumFooter {
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+
+
+/*-------------------------------------------------------------------
+[10. Komentar]
+*------------------------------------------------------------------*/
+#disqus_thread {
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    font-family: 'Avenir';
+}
+
+
+
+/*-------------------------------------------------------------------
+[11.Tombol Scroll Atas]
+*------------------------------------------------------------------*/
+.TombolScrollAtas {
+    width: 50px;
+    padding: 10px;
+    border: 0px solid #001F3F;
+    background-color: #01447e;
+    position: fixed;
+    color: #FFFFFF;
+    margin: 92vh 0px 0px 95%;
+    cursor: pointer;
+    font-family: 'Avenir';
+    border-bottom: solid 4px #627295;
+    opacity: 0.7;
+}
+
+.TombolScrollAtas:active {
+    color: #F4F4F4;
+    font-weight: bold;
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    border-bottom: none;
+    opacity: 1;
+}
+
+.TombolScrollAtas:hover {
+    box-shadow: inset 0px 0px 0px 2px #AAA;
+}
